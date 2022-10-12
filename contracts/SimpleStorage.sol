@@ -18,7 +18,9 @@ contract SimpleStorage {
     //dynamic  array
     People[] public people;
 
-    function store(uint256 _favoriteNumber) public {
+    //becasue we use override in the ExtraStorage's store function, so we need to add "virtual" that allow this 
+    //母体 store function to allow other place override this store function
+    function store(uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
     }
 
