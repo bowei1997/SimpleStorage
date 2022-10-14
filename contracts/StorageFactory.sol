@@ -7,13 +7,13 @@ contract SimpleFactory {
     SimpleStorage[] public simpleStorageArray;
 
     function createSimpleStorageContract() public {
-        //new means will will let the system know we will delpoy a new SimpleStorage contract
+        //new means  will let the system know we will delpoy a new SimpleStorage contract
         SimpleStorage simpleStorage = new SimpleStorage();
         //simpleStorage will push into the array -> simpleStorageArray
         simpleStorageArray.push(simpleStorage);
     } 
 
-    function sfStora(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
+    function sfStore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
         //type: SimpleStorage    name: simpleStorage   
         //use _simpleStorageIndex as index number for simpleStorageArray, and store that number into simpleStorage
         //SimpleStorage simpleStorage = simpleStorageArray[_simpleStorageIndex];
